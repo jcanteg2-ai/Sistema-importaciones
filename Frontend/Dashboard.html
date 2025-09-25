@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Importaciones y Exportaciones</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Librería para gráficas -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>📊 Dashboard de Importaciones y Exportaciones</h1>
+
+  <!-- Tarjetas de resumen -->
+  <div class="cards">
+    <div class="card">Importaciones: <span id="totalImport"></span></div>
+    <div class="card">Exportaciones: <span id="totalExport"></span></div>
+    <div class="card">En tránsito: <span id="enTransito"></span></div>
+    <div class="card">Entregados: <span id="entregados"></span></div>
+  </div>
+
+  <!-- Gráfica -->
+  <h2>📊 Importaciones vs Exportaciones</h2>
+  <canvas id="grafica"></canvas>
+
+  <!-- Tabla -->
+  <h2>📋 Operaciones recientes</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tipo</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Estado</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-dashboard"></tbody>
+  </table>
+
+  <!-- Script de conexión -->
+  <script src="script.js"></script>
+</body>
+</html>
